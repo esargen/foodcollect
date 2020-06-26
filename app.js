@@ -2,15 +2,14 @@ const persons = [
   {
     name: 'Emma Sargent',
     position: 'Designer',
-    description: 'A junior Architecture major from Aiken, SC, Emma joined in 2020. Her favorite food is layer cake, although peanut butter is a strong second. She handles our publication, Active Culture, in addition to the website and anywhere we need design.',
-    image: 'static/person.jpg',
-    imagesec: 'static/kale.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    image: 'static/strawberry.jpg',
   },
   {
     name: 'Carson Colenbaugh',
     position: 'Media Director',
     description: 'A sophomore Horticulture major from Kennesaw, Georgia, Carson joined the Food Collective team in 2018.  His favorite fruit is the scuppernong, and he could eat fajitas every day.  As a part of the Food Collective Executive Committee,  Carson is in charge of producing our biweekly newsletter, Inch x Inch, and handling tasks for some of the pop-up events, as well as participating in planning the annual Clemson Food Summit.',
-    image: 'static/carson.jpg'
+    image: 'static/kale.jpg'
   },
   {
     name: 'Frances Schueren',
