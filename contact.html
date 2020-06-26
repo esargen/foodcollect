@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" media="(max-width: 480px)" href="mobile.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1bcdd38cc2.js" crossorigin="anonymous"></script>
+  <title>Food Collective</title>
+</head>
+
+<body>
+  <div id="footer">
+    <a href="#"><div></div></a>
+  </div>
+
+  <div id="socials">
+    <div class="socialcontainer">
+      <div class="social">
+        <a href="mailto:clemsonfoodsummit@gmail.com" target=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="socialcontainer">
+      <div class="social">
+        <a href="https://www.instagram.com/clemsonfood/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="socialcontainer">
+      <div class="social">
+        <a href="https://www.facebook.com/ClemsonFood/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="header">
+    <div id="logo">
+      <a href="index.html">
+        <img src="static/logo.png" alt="Food Collective Logo" />
+      </a>
+    </div>
+  </div>
+
+  <div id="nav">
+    <div id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul id="webnav">
+      <li>
+        <div><a href="index.html">About</a></div>
+        <div>
+          <ul>
+            <a href="index.html#historycontainer"><li>History</li></a>
+            <a href="index.html#teamcontainer"><li>Our team</li></a>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div>Events</div>
+        <div>
+          <ul>
+            <li>CFC x LatinosUnidos</li>
+            <li>Pop-up Events 2020</li>
+            <li>Food Summit 2020</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div>Archives</div>
+        <div>
+          <ul>
+            <li>Food Summit 2019</li>
+            <li>Food Summit 2018</li>
+            <li>Food Summit 2017</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div><a href="#">Contact</a></div>
+        <div>
+          <ul>
+            <a href="#join"><li>Join us!</li></a>
+            <a href="#partner"><li>Partner</li></a>
+          </ul>
+        </div>
+      </li>
+  </div>
+
+  <div id="navoverlay"></div>
+
+
+  <script>
+  const mq = window.matchMedia( "(max-width: 480px)" );
+    if (mq.matches) {
+      const hamburg = document.getElementById('hamburger');
+      const nav = document.getElementById('webnav');
+      const overlay = document.getElementById('navoverlay');
+      nav.style.opacity = '0';
+      nav.style.pointerEvents = 'none';
+      overlay.style.opacity = '0';
+      overlay.style.pointerEvents = 'none';
+        hamburg.addEventListener('click', () => {
+          if (nav.style.opacity === '0' && overlay.style.opacity === '0') {
+            nav.style.opacity = '1';
+            nav.style.pointerEvents = 'auto';
+            overlay.style.opacity = '.5';
+            overlay.style.pointerEvents = 'auto';
+          } else {
+            nav.style.opacity = '0';
+            nav.style.pointerEvents = 'none';
+            overlay.style.opacity = '0';
+            overlay.style.pointerEvents = 'none';
+          }
+      });
+      overlay.addEventListener('click', () => {
+          nav.style.opacity = '0';
+          nav.style.pointerEvents = 'none';
+          overlay.style.opacity = '0';
+          overlay.style.pointerEvents = 'none';
+      });
+    } else {
+      console.log('boomer');
+    }
+  </script>
+
+<div id="rest">
+  <div class="sectioncontainer">
+    <div class="section" id="join">
+      <div class="image">
+        <img src="static/cabbage.png" alt="cauliflower" style="transform:rotate(90deg)" />
+      </div>
+      <div class="text">
+        <h3>Join the team!</h3>
+        <p>Are you passionate about food? Are you interested in where your food comes from, what's in your food, and how it shapes our cultures, identities, and communities?</p>
+        <p>If so, we are looking for you! The Clemson Food Collective is looking for passionate people to join our team dedicated to improving and educating people about our food system through various events and initiatives on campus. We aim to be a gathering place for all students involved in anything relating to our food system. Students of all majors, disciplines, and interests are welcome and encouraged to join our Food Collective family!</p>
+        <div class="signup">
+          <div><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfi3pmlI2wyv7fMW3-KJdo3AwgX0dZ-a9c8r_6yOTbdLO6KAg/viewform?usp=sf_link">Drop us a line!</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sectioncontainer">
+    <div class="section" id="partner">
+      <div class="text">
+        <h3>Partner with us!</h3>
+        <p>We would love to partner with your organization, farm, restaurant, or group to create meaningful discussions over food, and help generate ideas for impactful ways for you to get involved. The fun thing about food is that everyone needs it, and everyone can be involved with it. We want to hear your food story!</p>
+      </div>
+      <div class="image">
+        <img src="static/peppers.png" alt="pepper"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  const webnav = document.getElementById("webnav");
+  const buttons = webnav.children;
+  for (i=0; i < buttons.length; i++) {
+    const button = buttons[i];
+    const dropdown = button.querySelector("div:nth-child(2)");
+    dropdown.style.height = '0';
+    dropdown.style.opacity = '0';
+    button.addEventListener("mouseover", () => {
+        dropdown.style.height = 'auto';
+        dropdown.style.opacity = '1';
+    });
+    button.addEventListener("mouseout", () => {
+        dropdown.style.height = '0';
+        dropdown.style.opacity = '0';
+    })
+}
+  const nav = document.getElementById("nav");
+  const headerheight = document.getElementById('header').offsetHeight;
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > headerheight) {
+      console.log('PLEASE');
+      nav.classList.add('sticky');
+    } else {
+      nav.classList.remove('sticky');
+    }
+  });
+</script>
+<script src="app.js"></script>
+
+</body>
+</html>

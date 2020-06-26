@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" media="(max-width: 480px)" href="mobile.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1bcdd38cc2.js" crossorigin="anonymous"></script>
+  <title>Food Collective</title>
+</head>
+
+<body>
+  <div id="footer">
+    <a href="#"><div></div></a>
+  </div>
+
+  <div id="socials">
+    <div class="socialcontainer">
+      <div class="social">
+        <a href="" target=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="socialcontainer">
+      <div class="social">
+        <a href="https://www.instagram.com/clemsonfood/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="socialcontainer">
+      <div class="social">
+        <a href="https://www.facebook.com/ClemsonFood/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="header">
+    <div id="logo">
+      <a href="index.html">
+        <img src="static/logo.png" alt="Food Collective Logo" />
+      </a>
+    </div>
+  </div>
+
+  <div id="nav">
+    <div id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul id="webnav">
+      <li>
+        <div><a href="#">About</a></div>
+        <div>
+          <ul>
+            <a href="#historycontainer"><li>History</li></a>
+            <a href="#teamcontainer"><li>Our team</li></a>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div>Events</div>
+        <div>
+          <ul>
+            <li>CFC x LatinosUnidos</li>
+            <li>Pop-up Events 2020</li>
+            <li>Food Summit 2020</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div>Archives</div>
+        <div>
+          <ul>
+            <li>Food Summit 2019</li>
+            <li>Food Summit 2018</li>
+            <li>Food Summit 2017</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div><a href="contact.html">Contact</a></div>
+        <div>
+          <ul>
+            <a href="contact.html#join"><li>Join us!</li></a>
+            <a href="contact.html#partner"><li>Partner</li></a>
+          </ul>
+        </div>
+      </li>
+  </div>
+
+  <div id="navoverlay"></div>
+
+
+  <script>
+  const mq = window.matchMedia( "(max-width: 480px)" );
+    if (mq.matches) {
+      const hamburg = document.getElementById('hamburger');
+      const nav = document.getElementById('webnav');
+      const overlay = document.getElementById('navoverlay');
+      nav.style.opacity = '0';
+      nav.style.pointerEvents = 'none';
+      overlay.style.opacity = '0';
+      overlay.style.pointerEvents = 'none';
+        hamburg.addEventListener('click', () => {
+          if (nav.style.opacity === '0' && overlay.style.opacity === '0') {
+            nav.style.opacity = '1';
+            nav.style.pointerEvents = 'auto';
+            overlay.style.opacity = '.5';
+            overlay.style.pointerEvents = 'auto';
+          } else {
+            nav.style.opacity = '0';
+            nav.style.pointerEvents = 'none';
+            overlay.style.opacity = '0';
+            overlay.style.pointerEvents = 'none';
+          }
+      });
+      overlay.addEventListener('click', () => {
+          nav.style.opacity = '0';
+          nav.style.pointerEvents = 'none';
+          overlay.style.opacity = '0';
+          overlay.style.pointerEvents = 'none';
+      });
+    } else {
+      console.log('boomer');
+    }
+  </script>
+
+<div id="rest">
+  <div class="sectioncontainer">
+    <div class="section" id="home">
+      <div class="text">
+        <h3>Welcome!</h3>
+        <p>We are a student-run organization at Clemson University dedicated to influencing positive change within our food system. We promote food justice, equity, and sustainability through interdisciplinary events to educate and inspire Clemson students, faculty, and community members <b>to use the power of food as a force for good</b>.</p>
+      </div>
+      <div class="image">
+        <img src="static/brusselsprouts2.png" alt="brussel sprouts">
+      </div>
+    </div>
+  </div>
+  <div class="sectioncontainer" id="historycontainer">
+    <div class="section" id="history">
+      <div class="image">
+        <img src="static/radishes.png" />
+      </div>
+      <div class="text">
+        <h3>A Little History</h3>
+        <p>Three years ago, Michael Summers started the Clemson Food Summit with the idea that bringing good people together over good food would be a recipe for success in generating conversations and solutions for issues across the food continuum.</p>
+        <p>Since then, we’ve grown a lot, and have expanded to more than just a one-day event each year. Join us at a pop-up event to learn about a local producer and sample their goods, come to an immersion dinner to gain a more in-depth look at larger issues related to food justice and food equity, and don’t miss our main event each spring- the Food Summit, which brings speakers from across the region, interactive exhibits, and of course, incredible food together to provide a platform for food-based solutions.</p>
+      </div>
+    </div>
+  </div>
+  <div class="sectioncontainer" id="teamcontainer">
+    <div class="section" id="team">
+      <div>
+        <h3>The Team</h3>
+      </div>
+      <div>
+        <div class="row">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  const webnav = document.getElementById("webnav");
+  const buttons = webnav.children;
+  for (i=0; i < buttons.length; i++) {
+    const button = buttons[i];
+    const dropdown = button.querySelector("div:nth-child(2)");
+    dropdown.style.height = '0';
+    dropdown.style.opacity = '0';
+    button.addEventListener("mouseover", () => {
+        dropdown.style.height = 'auto';
+        dropdown.style.opacity = '1';
+    });
+    button.addEventListener("mouseout", () => {
+        dropdown.style.height = '0';
+        dropdown.style.opacity = '0';
+    })
+}
+  const nav = document.getElementById("nav");
+  const headerheight = document.getElementById('header').offsetHeight;
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > headerheight) {
+      console.log('PLEASE');
+      nav.classList.add('sticky');
+    } else {
+      nav.classList.remove('sticky');
+    }
+  });
+</script>
+<script src="app.js"></script>
+
+</body>
+</html>
