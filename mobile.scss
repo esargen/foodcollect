@@ -71,6 +71,32 @@
 
 .section {
   display: block;
+  margin-top: 50px;
+}
+
+
+
+#join .image, #partner .image {
+  margin: auto;
+  margin-top: 50px;
+}
+
+#join .text, #partner > .text {
+  text-align: center;
+  margin: auto;
+  p {
+    margin: auto;
+  }
+}
+
+#join .signup {
+  margin: auto;
+  max-width: 40%;
+  margin-top: 25px;
+}
+
+#join p, #partner p {
+  text-align: justify;
 }
 
 #team > div:nth-child(2) .row {
