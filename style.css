@@ -284,11 +284,12 @@ a {
         opacity: 0.75; }
     #team > div:nth-child(2) .column h4 {
       font-size: 18pt;
-      margin-bottom: 5px; }
+      margin-bottom: 5px;
+      color: #40ccc8; }
     #team > div:nth-child(2) .column h5 {
       text-transform: uppercase;
       font-size: 10pt;
-      color: #40ccc8;
+      color: darkgrey;
       font-weight: bold;
       margin-top: 0;
       margin-bottom: 10px; }
@@ -296,7 +297,20 @@ a {
       margin-top: 0;
       font-size: 10pt;
       text-align: justify;
-      width: 100%; }
+      width: 100%;
+      overflow: hidden;
+      transition: .1s ease; }
+    #team > div:nth-child(2) .column .readmore {
+      cursor: pointer;
+      font-size: 8pt;
+      color: #ff7538;
+      font-weight: bold; }
+    #team > div:nth-child(2) .column .emaillink {
+      margin: 0;
+      transition: .25s ease; }
+      #team > div:nth-child(2) .column .emaillink:hover {
+        color: #40ccc8;
+        transition: .25s ease; }
 
 #involve .image {
   background-color: rgba(64, 204, 200, 0.3);
