@@ -9,7 +9,8 @@ body, html {
   font-family: 'Roboto', sans-serif; }
 
 a {
-  text-decoration: none !important; }
+  text-decoration: none !important;
+  color: darkgrey; }
 
 #footer {
   position: fixed;
@@ -184,17 +185,20 @@ a {
 
 #rest {
   opacity: 1;
-  animation: fadeload 1.25s ease; }
+  animation: fadeload 1.25s ease;
+  width: 100%; }
 
 .sectioncontainer {
   margin-bottom: 50px; }
   .sectioncontainer:nth-child(1) {
     padding-top: 50px; }
 
+.sectioncontainer:nth-child(1) .section {
+  border-top-left-radius: 100px; }
+
 .section {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 25px;
-  border-top-left-radius: 100px;
   width: 85%;
   margin: auto;
   padding: 15px;
@@ -219,7 +223,7 @@ a {
     margin-top: 100px;
     margin-right: 50px;
     max-height: 175px;
-    width: 175px;
+    max-width: 175px;
     background-color: rgba(255, 117, 56, 0.5);
     border-radius: 100%; }
     .section .image img {
@@ -229,6 +233,15 @@ a {
       bottom: 35px;
       right: 15px;
       z-index: 2; }
+
+#home .text {
+  margin-left: 7.5%;
+  flex: 25%; }
+  #home .text h3 {
+    font-size: 36pt; }
+  #home .text p {
+    margin-left: 10%;
+    width: 80%; }
 
 #history .image {
   background-color: rgba(64, 204, 200, 0.3);
@@ -285,19 +298,93 @@ a {
       text-align: justify;
       width: 100%; }
 
-#join .image {
+#involve .image {
   background-color: rgba(64, 204, 200, 0.3);
-  margin-left: 15%;
+  margin-left: 5%;
   margin-top: 150px;
   max-width: 250px;
   max-height: 250px;
   flex: 30%;
   left: 15px;
   bottom: 50px; }
-#join div:nth-child(2) {
+#involve > div:nth-child(2) {
   margin-left: 5%;
   flex: 40%; }
-  #join div:nth-child(2) h3 {
+  #involve > div:nth-child(2) h3 {
+    color: #ff7538; }
+#involve .signup {
+  background-color: #40ccc8;
+  border-radius: 30px;
+  padding: 10px 10px;
+  max-width: 24%;
+  text-align: center;
+  transition: .25s ease; }
+  #involve .signup div {
+    margin: 0; }
+    #involve .signup div a {
+      color: white; }
+  #involve .signup:hover {
+    transform: scale(1.075);
+    transition: .25s ease; }
+#involve .socialblock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  width: 50%;
+  transition: .25s ease;
+  z-index: 4; }
+  #involve .socialblock:hover {
+    transition: .25s ease; }
+  #involve .socialblock .social {
+    font-size: 21px;
+    padding: 7px;
+    text-align: center;
+    transition: .25s ease;
+    background-color: #b9eceb;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    border-radius: 100%; }
+    #involve .socialblock .social a {
+      color: white !important; }
+    #involve .socialblock .social:hover {
+      background-color: #ffaa85;
+      transition: .25s ease;
+      cursor: pointer; }
+      #involve .socialblock .social:hover a {
+        color: white !important; }
+    #involve .socialblock .social i {
+      position: relative;
+      z-index: 3; }
+  #involve .socialblock .socialcontainer {
+    transition: .25s ease; }
+  #involve .socialblock .socialcontainer:hover {
+    transform: scale(1.2) !important;
+    transition: .25s ease; }
+#involve .text {
+  margin-left: 15%; }
+#involve p > a {
+  color: #7cdcd9;
+  position: relative;
+  bottom: 10pt;
+  font-weight: bold; }
+  #involve p > a:hover {
+    color: #40ccc8; }
+
+#join .image {
+  background-color: rgba(64, 204, 200, 0.3);
+  margin-left: 10%;
+  margin-top: 150px;
+  max-width: 200px;
+  max-height: 200px;
+  flex: 30%;
+  left: 15px;
+  bottom: 50px; }
+#join > div:nth-child(2) {
+  margin-left: 5%;
+  flex: 40%; }
+  #join > div:nth-child(2) h3 {
     color: #ff7538; }
 #join .signup {
   background-color: #40ccc8;
@@ -313,6 +400,105 @@ a {
   #join .signup:hover {
     transform: scale(1.075);
     transition: .25s ease; }
+#join .socialblock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  width: 50%;
+  transition: .25s ease;
+  z-index: 4; }
+  #join .socialblock:hover {
+    transition: .25s ease; }
+  #join .socialblock .social {
+    font-size: 21px;
+    padding: 7px;
+    text-align: center;
+    transition: .25s ease;
+    background-color: #b9eceb;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    border-radius: 100%; }
+    #join .socialblock .social a {
+      color: white !important; }
+    #join .socialblock .social:hover {
+      background-color: #ffaa85;
+      transition: .25s ease;
+      cursor: pointer; }
+      #join .socialblock .social:hover a {
+        color: white !important; }
+    #join .socialblock .social i {
+      position: relative;
+      z-index: 3; }
+  #join .socialblock .socialcontainer {
+    transition: .25s ease; }
+  #join .socialblock .socialcontainer:hover {
+    transform: scale(1.2) !important;
+    transition: .25s ease; }
+#join .text {
+  margin-left: 15%; }
+#join p > a {
+  color: #7cdcd9;
+  position: relative;
+  bottom: 10pt;
+  font-weight: bold; }
+  #join p > a:hover {
+    color: #40ccc8; }
+
+#engagemenu {
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 85%;
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px 20px 20px 20px; }
+  #engagemenu > h2, #engagemenu > p {
+    text-align: center;
+    width: 100%; }
+  #engagemenu > h2 {
+    font-family: 'Oswald', sans-serif;
+    color: #bdcc3e;
+    font-size: 21pt;
+    font-weight: 600; }
+  #engagemenu > p {
+    max-width: 65%;
+    margin: auto;
+    color: darkgrey; }
+  #engagemenu > div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 5%; }
+    #engagemenu > div > a {
+      flex: 48%;
+      margin-left: 1%;
+      max-width: 48%;
+      text-align: center; }
+      #engagemenu > div > a div {
+        padding: 15px 20px 25px 20px;
+        background-color: #91e1df;
+        border-radius: 15px;
+        color: white;
+        transition: .25s ease; }
+        #engagemenu > div > a div:hover {
+          transform: scale(1.05);
+          background-color: #54d1ce;
+          transition: .5s ease; }
+      #engagemenu > div > a h3 {
+        font-size: 16pt;
+        text-transform: uppercase;
+        letter-spacing: .15em; }
+      #engagemenu > div > a p {
+        max-width: 85%;
+        margin: auto; }
+
+#calendar {
+  max-width: 50%;
+  margin-top: 75px;
+  margin-left: 10%;
+  margin-bottom: 50px; }
 
 @keyframes logo {
   0% {

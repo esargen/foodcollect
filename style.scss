@@ -21,6 +21,7 @@ body, html {
 
 a {
   text-decoration: none !important;
+  color: darkgrey;
 }
 
 #footer {
@@ -226,6 +227,7 @@ a {
 #rest {
   opacity: 1;
   animation: fadeload 1.25s ease;
+  width: 100%;
 }
 
 .sectioncontainer {
@@ -235,11 +237,16 @@ a {
   }
 }
 
-
+.sectioncontainer {
+  &:nth-child(1) {
+    .section {
+      border-top-left-radius: 100px;
+    }
+  }
+}
 .section {
   background-color: adjust-color(white, $alpha: -0.2);
   border-radius: 25px;
-  border-top-left-radius: 100px;
   width: 85%;
   margin: auto;
   padding: 15px;
@@ -267,7 +274,7 @@ a {
     margin-top: 100px;
     margin-right: 50px;
     max-height: 175px;
-    width: 175px;
+    max-width: 175px;
     background-color: adjust-color($red, $alpha: -0.5);
     border-radius: 100%;
     img {
@@ -277,6 +284,20 @@ a {
       bottom: 35px;
       right: 15px;
       z-index: 2;
+    }
+  }
+}
+
+#home {
+  .text {
+    margin-left: 7.5%;
+    flex: 25%;
+    h3 {
+      font-size: 36pt;
+    }
+    p {
+      margin-left: 10%;
+      width: 80%;
     }
   }
 }
@@ -353,10 +374,10 @@ a {
 
   }
 
-#join {
+#involve {
   .image {
     background-color: adjust-color($teal, $alpha: -0.7);
-    margin-left: 15%;
+    margin-left: 5%;
     margin-top: 150px;
     max-width: 250px;
     max-height: 250px;
@@ -364,7 +385,7 @@ a {
     left: 15px;
     bottom: 50px;
     }
-    div:nth-child(2) {
+    > div:nth-child(2) {
         margin-left: 5%;
         flex: 40%;
         h3 {
@@ -389,10 +410,230 @@ a {
         transition: .25s ease;
       }
     }
+
+    .socialblock {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+      width: 50%;
+      transition: .25s ease;
+      z-index:4;
+      &:hover {
+        transition: .25s ease;
+      }
+      .social {
+        font-size: 21px;
+        padding: 7px;
+        text-align: center;
+        transition: .25s ease;
+        background-color: lighten($teal, 30%);
+        width: 25px;
+        height: 25px;
+        position:relative;
+        border-radius: 100%;
+        a {
+          color: lighten(white, 15%) !important;
+        }
+        &:hover {
+          background-color: lighten($red, 15%);
+          transition: .25s ease;
+          cursor: pointer;
+          a {
+            color: white !important;
+          }
+        }
+        i {
+          position:relative;
+          z-index: 3;
+        }
+      }
+      .socialcontainer {
+        transition: .25s ease;
+      }
+      .socialcontainer:hover {
+        transform: scale(1.2) !important;
+        transition: .25s ease;
+      }
+    }
+    .text {
+      margin-left: 15%;
+    }
+    p {
+      > a {
+        color: lighten($teal, 15%);
+        position: relative;
+        bottom: 10pt;
+        font-weight: bold;
+        &:hover {
+          color: $teal;
+        }
+      }
+    }
 }
 
+#join {
+  .image {
+    background-color: adjust-color($teal, $alpha: -0.7);
+    margin-left: 10%;
+    margin-top: 150px;
+    max-width: 200px;
+    max-height: 200px;
+    flex: 30%;
+    left: 15px;
+    bottom: 50px;
+    }
+    > div:nth-child(2) {
+        margin-left: 5%;
+        flex: 40%;
+        h3 {
+          color: $red;
+        }
+    }
+    .signup {
+      background-color: $teal;
+      border-radius: 30px;
+      padding: 10px 10px;
+      max-width: 24%;
+      text-align: center;
+      transition: .25s ease;
+      div {
+        margin: 0;
+        a {
+          color: white;
+        }
+      }
+      &:hover {
+        transform: scale(1.075);
+        transition: .25s ease;
+      }
+    }
 
+    .socialblock {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+      width: 50%;
+      transition: .25s ease;
+      z-index:4;
+      &:hover {
+        transition: .25s ease;
+      }
+      .social {
+        font-size: 21px;
+        padding: 7px;
+        text-align: center;
+        transition: .25s ease;
+        background-color: lighten($teal, 30%);
+        width: 25px;
+        height: 25px;
+        position:relative;
+        border-radius: 100%;
+        a {
+          color: lighten(white, 15%) !important;
+        }
+        &:hover {
+          background-color: lighten($red, 15%);
+          transition: .25s ease;
+          cursor: pointer;
+          a {
+            color: white !important;
+          }
+        }
+        i {
+          position:relative;
+          z-index: 3;
+        }
+      }
+      .socialcontainer {
+        transition: .25s ease;
+      }
+      .socialcontainer:hover {
+        transform: scale(1.2) !important;
+        transition: .25s ease;
+      }
+    }
+    .text {
+      margin-left: 15%;
+    }
+    p {
+      > a {
+        color: lighten($teal, 15%);
+        position: relative;
+        bottom: 10pt;
+        font-weight: bold;
+        &:hover {
+          color: $teal;
+        }
+      }
+    }
+}
 
+#engagemenu {
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 85%;
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px 20px 20px 20px;
+  > h2, > p {
+    text-align: center;
+    width: 100%;
+  }
+  > h2 {
+    font-family: 'Oswald', sans-serif;
+    color: $green;
+    font-size: 21pt;
+    font-weight: 600;
+  }
+  > p {
+    max-width: 65%;
+    margin: auto;
+    color: darkgrey;
+  }
+  > div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    > a {
+      flex: 48%;
+      margin-left: 1%;
+      max-width: 48%;
+      text-align: center;
+      div {
+        padding: 15px 20px 25px 20px;
+        background-color: lighten($teal, 20%);
+        border-radius: 15px;
+        color: white;
+        transition: .25s ease;
+        &:hover {
+          transform: scale(1.05);
+          background-color: lighten($teal, 5%);
+          transition: .5s ease;
+        }
+      }
+      h3 {
+        font-size: 16pt;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+      }
+      p {
+        max-width: 85%;
+        margin: auto;
+      }
+    }
+  }
+}
+
+#calendar {
+  max-width: 50%;
+  margin-top: 75px;
+  margin-left: 10%;
+  margin-bottom: 50px;
+}
 
 
 @keyframes logo {

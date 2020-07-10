@@ -1,3 +1,13 @@
+@use "sass:color";
+
+$red: #ff7538;
+$green: #bdcc3e;
+$orange: #ff7538;
+$yellow: #ffe67b;
+$purple: #ba97d1;
+$pink: #ffc2db;
+$teal: #40ccc8;
+
 #header {
   border-bottom-right-radius: 5px;
   #logo {
@@ -20,7 +30,6 @@
   max-width: 100%;
   z-index: 5;
   position: absolute;
-
   #hamburger {
     position: relative;
     float: right;
@@ -39,6 +48,8 @@
     margin: auto;
     max-height: inherit;
     max-width: 50%;
+    transition: .5s ease;
+    display: block;
     > li {
       margin: auto;
       margin-top: 15px;
@@ -64,14 +75,15 @@
   height: 217vh;
   width: 100%;
   z-index: 4;
-  transition: opacity .5s ease;
-  transition: display 0s;
+  transition: .5s ease;
   pointer-events: none;
 }
 
 .section {
   display: block;
   margin-top: 50px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 
@@ -106,9 +118,8 @@
   }
 }
 
+
 #home {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
   > div {
     margin: auto;
     width: 80%;
@@ -129,6 +140,10 @@
       bottom: 20px;
     }
   }
+  .text {
+    margin: auto;
+    flex: 100%;
+  }
 }
 
 #history {
@@ -141,4 +156,57 @@
       bottom: 20px;
     }
   }
+}
+
+#involve {
+  p {
+    margin-top: auto;
+    margin-bottom: auto;
+    a {
+      bottom: 0;
+    }
+  }
+  .socialblock {
+    width: 80%;
+    margin: auto;
+  }
+  > div:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-top: 15%;
+    img {
+      bottom: 20px;
+    }
+  }
+}
+
+#join {
+  p {
+    margin-top: auto;
+    margin-bottom: auto;
+    a {
+      bottom: 0;
+    }
+  }
+
+}
+
+#engagemenu {
+  > p {
+    text-align: justify;
+    max-width: 85%;
+  }
+  > div {
+    display: block;
+    a {
+      div {
+        background-color: lighten($teal, 5%);
+      }
+    }
+  }
+}
+
+#calendar {
+  max-width: 85%;
 }

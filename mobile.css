@@ -1,3 +1,4 @@
+@use "sass:color";
 #header {
   border-bottom-right-radius: 5px; }
   #header #logo {
@@ -32,7 +33,9 @@
   #nav > ul {
     margin: auto;
     max-height: inherit;
-    max-width: 50%; }
+    max-width: 50%;
+    transition: .5s ease;
+    display: block; }
     #nav > ul > li {
       margin: auto;
       margin-top: 15px;
@@ -53,13 +56,14 @@
   height: 217vh;
   width: 100%;
   z-index: 4;
-  transition: opacity .5s ease;
-  transition: display 0s;
+  transition: .5s ease;
   pointer-events: none; }
 
 .section {
   display: block;
-  margin-top: 50px; }
+  margin-top: 50px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px; }
 
 #join .image, #partner .image {
   margin: auto;
@@ -84,24 +88,24 @@
   #team > div:nth-child(2) .row .column {
     max-width: 85%; }
 
-#home {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px; }
-  #home > div {
-    margin: auto;
-    width: 80%; }
-    #home > div * {
-      text-align: center; }
-  #home p {
-    width: 100%;
-    text-align: justify; }
-  #home .image {
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    margin-top: 15%; }
-    #home .image img {
-      bottom: 20px; }
+#home > div {
+  margin: auto;
+  width: 80%; }
+  #home > div * {
+    text-align: center; }
+#home p {
+  width: 100%;
+  text-align: justify; }
+#home .image {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  margin-top: 15%; }
+  #home .image img {
+    bottom: 20px; }
+#home .text {
+  margin: auto;
+  flex: 100%; }
 
 #history .image {
   width: 100px;
@@ -110,5 +114,38 @@
   margin-top: 15%; }
   #history .image img {
     bottom: 20px; }
+
+#involve p {
+  margin-top: auto;
+  margin-bottom: auto; }
+  #involve p a {
+    bottom: 0; }
+#involve .socialblock {
+  width: 80%;
+  margin: auto; }
+#involve > div:nth-child(2) {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  margin-top: 15%; }
+  #involve > div:nth-child(2) img {
+    bottom: 20px; }
+
+#join p {
+  margin-top: auto;
+  margin-bottom: auto; }
+  #join p a {
+    bottom: 0; }
+
+#engagemenu > p {
+  text-align: justify;
+  max-width: 85%; }
+#engagemenu > div {
+  display: block; }
+  #engagemenu > div a div {
+    background-color: #54d1ce; }
+
+#calendar {
+  max-width: 85%; }
 
 /*# sourceMappingURL=mobile.css.map */

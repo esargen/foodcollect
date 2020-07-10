@@ -1,0 +1,24 @@
+{
+  "monthly": [
+    {
+      "id": 1,
+      "name": "This is a JSON event",
+      "startdate": "2020-7-10",
+      "enddate": "2020-7-11",
+      "starttime": "12:00",
+      "endtime": "2:00",
+      "color": "#FFB128",
+      "url": ""
+    },
+    {
+      "id": 2,
+      "name": "This is a JSON event",
+      "startdate": "2020-7-12",
+      "enddate": "2020-7-13",
+      "starttime": "12:00",
+      "endtime": "2:00",
+      "color": "#EF44EF",
+      "url": ""
+    }
+  ]
+}
