@@ -22,7 +22,7 @@ const persons = [
   {
     name: 'Emma Sargent',
     position: 'Executive Designer',
-    description: 'A junior Architecture major from Aiken, SC, Emma is most likely to be found thumbing through old cookbooks or sketching out her next ambitious dessert project. A passion for design and interest in the present-day conversation about food has landed her the sweet gig of CFC Executive Designer, as well as manager for our publication, Active Culture.',
+    description: 'A junior Architecture major from Aiken, SC, Emma is most likely to be found thumbing through old cookbooks or sketching out her next ambitious dessert project. A passion for design and interest in the present-day conversation about food has landed her the sweet gig of CFC Executive Designer, <span style="randomcolor">web designer</span>, and manager for our publication, Active Culture.',
     image: 'static/strawberry.jpg',
     email: 'esargen@g.clemson.edu'
   },
@@ -35,7 +35,7 @@ const persons = [
 
 const profiles = document.querySelector('.row');
 
-
+const themecolors = ['#bdcc3e', '#ff7538', '#40ccc8'];
 
 document.addEventListener('DOMContentLoaded', () => {
   for (i=0; i<persons.length; i++) {
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       description = document.createElement('P');
       profile.appendChild(description);
       description.classList += 'description';
-      description.textContent = person.description;
+      description.innerHTML = person.description;
       if (description.clientHeight > 200) {
         description.style.maxHeight = "200px";
         readMore = document.createElement('p');
@@ -79,7 +79,25 @@ document.addEventListener('DOMContentLoaded', () => {
         readMore.classList += "readmore";
         readMore.textContent = "read more";
       }
+      if (person.name === "Emma Sargent") {
+        designer = document.getElementsByTagName("span");
+        designchar = designer[0];
+
+        designchar.addEventListener("mouseover", () => {
+            colorinterval = setInterval(function() {
+                randomnumber = Math.floor(Math.random() * themecolors.length);
+                randomcolor = themecolors[randomnumber];
+                designchar.style.color = randomcolor;
+                designchar.style.fontWeight = "bold";
+              }, 250)
+        });
+        designchar.addEventListener("mouseout", () => {
+          clearInterval(colorinterval);
+          designchar.style.color = "darkgrey";
+          designchar.style.fontWeight = "normal";
+        });
     }
+  }
     if (person.hasOwnProperty('email')) {
       newAttr = document.createElement('A');
       profile.appendChild(newAttr);

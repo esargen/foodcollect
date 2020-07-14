@@ -191,7 +191,6 @@
   const headerheight = document.getElementById('header').offsetHeight;
   window.addEventListener("scroll", () => {
     if (window.pageYOffset > headerheight) {
-      console.log('PLEASE');
       nav.classList.add('sticky');
     } else {
       nav.classList.remove('sticky');
