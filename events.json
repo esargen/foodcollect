@@ -2,22 +2,22 @@
   "monthly": [
     {
       "id": 1,
-      "name": "This is a JSON event",
-      "startdate": "2020-7-10",
-      "enddate": "2020-7-11",
+      "name": "CFC Meeting",
+      "startdate": "2020-7-15",
+      "enddate": "2020-7-15",
       "starttime": "12:00",
-      "endtime": "2:00",
-      "color": "#FFB128",
+      "endtime": "1:00",
+      "color": "#40ccc8",
       "url": ""
     },
     {
       "id": 2,
-      "name": "This is a JSON event",
-      "startdate": "2020-7-12",
-      "enddate": "2020-7-13",
+      "name": "Cilantro Roundtable Discussion",
+      "startdate": "2020-7-15",
+      "enddate": "2020-7-17",
       "starttime": "12:00",
       "endtime": "2:00",
-      "color": "#EF44EF",
+      "color": "#ff8752",
       "url": ""
     }
   ]
