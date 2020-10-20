@@ -683,6 +683,13 @@ p {
 .resourcemenu .columncontainer {
   max-width: 40%;
   flex: 40%;
+  opacity: 0.75;
+  transition: 0.25s ease;
+}
+.resourcemenu .columncontainer:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  transition: 0.5s ease;
 }
 .resourcemenu .column {
   display: flex;
@@ -691,7 +698,6 @@ p {
   flex: 20%;
 }
 .resourcemenu .linkcontainer .weblink {
-  transition: 0.25s ease;
   border-radius: 100%;
   height: 40px;
   width: 40px;
@@ -700,10 +706,6 @@ p {
   background-color: #40ccc8;
   padding: 5px;
   display: flex;
-}
-.resourcemenu .linkcontainer .weblink:hover {
-  transform: scale(1.1);
-  transition: 0.5s ease;
 }
 .resourcemenu .linkcontainer .weblink p {
   align-self: center;
@@ -731,6 +733,7 @@ p {
   font-size: 10pt;
   margin: 0;
   margin-left: 5%;
+  margin-bottom: 10px;
 }
 
 @keyframes expandnav {
