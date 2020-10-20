@@ -18,7 +18,7 @@ const persons = [
     name: 'Frances Schueren',
     position: 'Finance Director',
     description: 'A senior in Food Science and Technology with an emphasis on sustainability and minors in plant and environmental science and chemistry, Frances is passionate about making food for everyone to enjoy, especially kids. She joined CFC her freshman year, and acted as the director in 2019. She\'s now taking a step back from CFC to pursue an internship with Greenville nonprofit Mill Village Farms. She loves riding her bike, making blueberry coffee cake, and talking about the intersection of food, housing, and education.',
-    image: 'static/frances.jpg'
+    image: 'static/frances.JPG'
   },
   {
     name: 'Emma Sargent',
