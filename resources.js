@@ -101,133 +101,149 @@ document.addEventListener('DOMContentLoaded', () => {
     for (i=0; i<localorgs.length; i++) {
       let org = localorgs[i];
 
-      let orgchunk = document.createElement('DIV');
-      localorgbank.appendChild(orgchunk);
-      orgchunk.classList += 'column';
-
       if (org.hasOwnProperty('website')) {
-        let linkcontainer = document.createElement('DIV');
-        linkcontainer.classList = "linkcontainer";
-        orgchunk.appendChild(linkcontainer);
-        newAttr = document.createElement('A');
-        linkcontainer.appendChild(newAttr);
-        newAttr.classList += 'weblink';
-        newAttr.setAttribute("href", org.website);
-        newAttr.setAttribute("target", "blank");
-        if (org.hasOwnProperty('image')) {
-          linkimage = document.createElement('img');
-          newAttr.appendChild(linkimage);
-          linkimage.setAttribute("src", org.image)
-        } else {
-          linkplaceholder = document.createElement('p');
-          newAttr.appendChild(linkplaceholder);
-          let namesplit = org.name.split(" ");
-          for (j=0;j<namesplit.length;j++) {
-            let initial = namesplit[j].charAt(0);
-            linkplaceholder.innerHTML += initial;
+        let columncontainer = document.createElement('a');
+        columncontainer.classList = "columncontainer";
+        localorgbank.appendChild(columncontainer);
+        columncontainer.setAttribute("href", org.website);
+        columncontainer.setAttribute("target", "blank");
+
+        let orgchunk = document.createElement('DIV');
+        columncontainer.appendChild(orgchunk);
+        orgchunk.classList += 'column';
+
+        if (org.hasOwnProperty('website')) {
+          let linkcontainer = document.createElement('DIV');
+          linkcontainer.classList = "linkcontainer";
+          orgchunk.appendChild(linkcontainer);
+          newAttr = document.createElement('A');
+          linkcontainer.appendChild(newAttr);
+          newAttr.classList += 'weblink';
+          newAttr.setAttribute("href", org.website);
+          newAttr.setAttribute("target", "blank");
+          if (org.hasOwnProperty('image')) {
+            linkimage = document.createElement('img');
+            newAttr.appendChild(linkimage);
+            linkimage.setAttribute("src", org.image)
+          } else {
+            linkplaceholder = document.createElement('p');
+            newAttr.appendChild(linkplaceholder);
+            let namesplit = org.name.split(" ");
+            for (j=0;j<namesplit.length;j++) {
+              let initial = namesplit[j].charAt(0);
+              linkplaceholder.innerHTML += initial;
+            }
           }
-        };
-      }
-
-      let textcontent = document.createElement('DIV');
-      orgchunk.appendChild(textcontent);
-      textcontent.classList = "textcontent";
-
-      if (org.hasOwnProperty('name')) {
-        newAttr = document.createElement('H4');
-        textcontent.appendChild(newAttr);
-        newAttr.classList += 'name';
-        newAttr.textContent = org.name;
-      }
-
-      if (org.mission != "" && org.mission != null) {
-        missiontitle = document.createElement('P');
-        missiontitle.innerHTML = "what they do";
-        missiontitle.classList = "subhead";
-        textcontent.appendChild(missiontitle);
-        mission = document.createElement('P');
-        textcontent.appendChild(mission);
-        mission.classList += 'descriptor';
-        mission.innerHTML = org.mission;
         }
 
-      if (org.engage != "" && org.engage != null) {
-        engagetitle = document.createElement('P');
-        engagetitle.innerHTML = "how you can help";
-        engagetitle.classList = "subhead";
-        textcontent.appendChild(engagetitle);
-        engage = document.createElement('P');
-        textcontent.appendChild(engage);
-        engage.classList += 'descriptor';
-        engage.innerHTML = org.engage;
+        let textcontent = document.createElement('DIV');
+        orgchunk.appendChild(textcontent);
+        textcontent.classList = "textcontent";
+
+        if (org.hasOwnProperty('name')) {
+          newAttr = document.createElement('H4');
+          textcontent.appendChild(newAttr);
+          newAttr.classList += 'name';
+          newAttr.textContent = org.name;
+        }
+
+        if (org.mission != "" && org.mission != null) {
+          missiontitle = document.createElement('P');
+          missiontitle.innerHTML = "what they do";
+          missiontitle.classList = "subhead";
+          textcontent.appendChild(missiontitle);
+          mission = document.createElement('P');
+          textcontent.appendChild(mission);
+          mission.classList += 'descriptor';
+          mission.innerHTML = org.mission;
+          }
+
+        if (org.engage != "" && org.engage != null) {
+          engagetitle = document.createElement('P');
+          engagetitle.innerHTML = "how you can help";
+          engagetitle.classList = "subhead";
+          textcontent.appendChild(engagetitle);
+          engage = document.createElement('P');
+          textcontent.appendChild(engage);
+          engage.classList += 'descriptor';
+          engage.innerHTML = org.engage;
+          }
         }
     }
   } else if (clemsonorgbank != 'undefined' && clemsonorgbank != null) {
     for (i=0; i<clemsonorgs.length; i++) {
       let org = clemsonorgs[i];
 
-      let orgchunk = document.createElement('DIV');
-      clemsonorgbank.appendChild(orgchunk);
-      orgchunk.classList += 'column';
-
       if (org.hasOwnProperty('website')) {
-        let linkcontainer = document.createElement('DIV');
-        linkcontainer.classList = "linkcontainer";
-        orgchunk.appendChild(linkcontainer);
-        newAttr = document.createElement('A');
-        newAttr.setAttribute("target", "blank");
-        linkcontainer.appendChild(newAttr);
-        newAttr.classList += 'weblink';
-        newAttr.setAttribute("href", org.website);
-        if (org.hasOwnProperty('image')) {
-          linkimage = document.createElement('img');
-          newAttr.appendChild(linkimage);
-          linkimage.setAttribute("src", org.image)
-        } else {
-          linkplaceholder = document.createElement('p');
-          newAttr.appendChild(linkplaceholder);
-          let namesplit = org.name.split(" ");
-          for (j=0;j<namesplit.length;j++) {
-            let initial = namesplit[j].charAt(0);
-            linkplaceholder.innerHTML += initial;
+        let columncontainer = document.createElement('a');
+        columncontainer.classList = "columncontainer";
+        clemsonorgbank.appendChild(columncontainer);
+        columncontainer.setAttribute("href", org.website);
+        columncontainer.setAttribute("target", "blank");
+
+          let orgchunk = document.createElement('DIV');
+          columncontainer.appendChild(orgchunk);
+          orgchunk.classList += 'column';
+
+          if (org.hasOwnProperty('website')) {
+            let linkcontainer = document.createElement('DIV');
+            linkcontainer.classList = "linkcontainer";
+            orgchunk.appendChild(linkcontainer);
+            newAttr = document.createElement('A');
+            newAttr.setAttribute("target", "blank");
+            linkcontainer.appendChild(newAttr);
+            newAttr.classList += 'weblink';
+            newAttr.setAttribute("href", org.website);
+            if (org.hasOwnProperty('image')) {
+              linkimage = document.createElement('img');
+              newAttr.appendChild(linkimage);
+              linkimage.setAttribute("src", org.image)
+            } else {
+              linkplaceholder = document.createElement('p');
+              newAttr.appendChild(linkplaceholder);
+              let namesplit = org.name.split(" ");
+              for (j=0;j<namesplit.length;j++) {
+                let initial = namesplit[j].charAt(0);
+                linkplaceholder.innerHTML += initial;
+              }
+            };
           }
-        };
+
+
+          let textcontent = document.createElement('DIV');
+          orgchunk.appendChild(textcontent);
+          textcontent.classList = "textcontent";
+
+          if (org.hasOwnProperty('name')) {
+            newAttr = document.createElement('H4');
+            textcontent.appendChild(newAttr);
+            newAttr.classList += 'name';
+            newAttr.textContent = org.name;
+          }
+
+          if (org.mission != "" && org.mission != null) {
+            missiontitle = document.createElement('P');
+            missiontitle.innerHTML = "what they do";
+            missiontitle.classList = "subhead";
+            textcontent.appendChild(missiontitle);
+            mission = document.createElement('P');
+            textcontent.appendChild(mission);
+            mission.classList += 'descriptor';
+            mission.innerHTML = org.mission;
+            }
+
+          if (org.engage != "" && org.engage != null) {
+            engagetitle = document.createElement('P');
+            engagetitle.innerHTML = "how you can help";
+            engagetitle.classList = "subhead";
+            textcontent.appendChild(engagetitle);
+            engage = document.createElement('P');
+            textcontent.appendChild(engage);
+            engage.classList += 'descriptor';
+            engage.innerHTML = org.engage;
+            }
+          }
+      }} else {
+        console.log("error");
       }
-
-      let textcontent = document.createElement('DIV');
-      orgchunk.appendChild(textcontent);
-      textcontent.classList = "textcontent";
-
-      if (org.hasOwnProperty('name')) {
-        newAttr = document.createElement('H4');
-        textcontent.appendChild(newAttr);
-        newAttr.classList += 'name';
-        newAttr.textContent = org.name;
-      }
-
-      if (org.mission != "" && org.mission != null) {
-        missiontitle = document.createElement('P');
-        missiontitle.innerHTML = "what they do";
-        missiontitle.classList = "subhead";
-        textcontent.appendChild(missiontitle);
-        mission = document.createElement('P');
-        textcontent.appendChild(mission);
-        mission.classList += 'descriptor';
-        mission.innerHTML = org.mission;
-        }
-
-      if (org.engage != "" && org.engage != null) {
-        engagetitle = document.createElement('P');
-        engagetitle.innerHTML = "how you can help";
-        engagetitle.classList = "subhead";
-        textcontent.appendChild(engagetitle);
-        engage = document.createElement('P');
-        textcontent.appendChild(engage);
-        engage.classList += 'descriptor';
-        engage.innerHTML = org.engage;
-        }
-    }} else {
-      console.log("error");
-    }
-  }
-  );
+  });

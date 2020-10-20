@@ -210,3 +210,25 @@ $teal: #40ccc8;
 #calendar {
   max-width: 85%;
 }
+
+.resourcemenu {
+  > div {
+    display: block;
+    .column {
+      .linkcontainer {
+        display: none;
+        > a {
+        margin: auto;
+        }
+      }
+      max-width: 85%;
+      flex: 85%;
+      display: block;
+      margin: auto;
+      margin-top: 10vh;
+      p {
+        text-align: justify;
+      }
+    }
+  }
+}

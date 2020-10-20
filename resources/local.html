@@ -138,6 +138,38 @@
   <script src="../app.js"></script>
   <script src="https://kit.fontawesome.com/1bcdd38cc2.js" crossorigin="anonymous"></script>
   <script src="../resources.js"></script>
+  <script>
+  const mq = window.matchMedia( "(max-width: 480px)" );
+    if (mq.matches) {
+      const hamburg = document.getElementById('hamburger');
+      const nav = document.getElementById('webnav');
+      const overlay = document.getElementById('navoverlay');
+      nav.style.opacity = '0';
+      nav.style.pointerEvents = 'none';
+      overlay.style.opacity = '0';
+      overlay.style.pointerEvents = 'none';
+        hamburg.addEventListener('click', () => {
+          if (nav.style.opacity === '0' && overlay.style.opacity === '0') {
+            nav.style.opacity = '1';
+            nav.style.pointerEvents = 'auto';
+            overlay.style.opacity = '.5';
+            overlay.style.pointerEvents = 'auto';
+          } else {
+            nav.style.opacity = '0';
+            nav.style.pointerEvents = 'none';
+            overlay.style.opacity = '0';
+            overlay.style.pointerEvents = 'none';
+          }
+      });
+      overlay.addEventListener('click', () => {
+          nav.style.opacity = '0';
+          nav.style.pointerEvents = 'none';
+          overlay.style.opacity = '0';
+          overlay.style.pointerEvents = 'none';
+      });
+    } else {
+    }
+  </script>
 
 
 </body>

@@ -664,49 +664,33 @@ p {
   margin: auto;
 }
 .resourcemenu > div {
-  max-width: 85%;
+  max-width: 75%;
   margin: auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 5%;
 }
-.resourcemenu > div > a {
-  flex: 48%;
-  margin-left: 1%;
-  max-width: 48%;
-  text-align: center;
-}
-.resourcemenu > div > a div {
-  padding: 15px 20px 25px 20px;
-  background-color: #91e1df;
-  border-radius: 15px;
-  color: white;
-  transition: 0.25s ease;
-}
-.resourcemenu > div > a div:hover {
-  transform: scale(1.05);
-  background-color: #54d1ce;
-  transition: 0.5s ease;
-}
-.resourcemenu > div > a h3 {
+.resourcemenu > div h3 {
   font-size: 16pt;
   text-transform: uppercase;
   letter-spacing: 0.15em;
 }
-.resourcemenu > div > a p {
+.resourcemenu > div p {
   max-width: 85%;
   margin: auto;
 }
-.resourcemenu > div .column {
+.resourcemenu .columncontainer {
   max-width: 40%;
   flex: 40%;
+}
+.resourcemenu .column {
   display: flex;
 }
-.resourcemenu > div .linkcontainer {
+.resourcemenu .linkcontainer {
   flex: 20%;
 }
-.resourcemenu > div .linkcontainer .weblink {
+.resourcemenu .linkcontainer .weblink {
   transition: 0.25s ease;
   border-radius: 100%;
   height: 40px;
@@ -717,32 +701,32 @@ p {
   padding: 5px;
   display: flex;
 }
-.resourcemenu > div .linkcontainer .weblink:hover {
+.resourcemenu .linkcontainer .weblink:hover {
   transform: scale(1.1);
   transition: 0.5s ease;
 }
-.resourcemenu > div .linkcontainer .weblink p {
+.resourcemenu .linkcontainer .weblink p {
   align-self: center;
   width: 100%;
   color: white;
   text-align: center;
 }
-.resourcemenu > div .textcontent {
+.resourcemenu .textcontent {
   flex: 75%;
 }
-.resourcemenu > div .textcontent h4 {
-  color: #bdcc3e;
+.resourcemenu .textcontent h4 {
+  color: #40ccc8;
   font-size: 16pt;
   font-family: "Oswald", sans-serif;
 }
-.resourcemenu > div .textcontent .subhead {
+.resourcemenu .textcontent .subhead {
   color: #ff7538;
   text-transform: uppercase;
   font-size: 9pt;
   font-weight: bold;
   margin-left: 5%;
 }
-.resourcemenu > div .textcontent .descriptor {
+.resourcemenu .textcontent .descriptor {
   padding: 0;
   font-size: 10pt;
   margin: 0;

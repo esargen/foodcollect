@@ -2,23 +2,13 @@
   "monthly": [
     {
       "id": 1,
-      "name": "CFC Meeting",
-      "startdate": "2020-7-15",
-      "enddate": "2020-7-15",
-      "starttime": "12:00",
-      "endtime": "1:00",
+      "name": "Sustaining Way Volunteering",
+      "startdate": "2020-10-22",
+      "enddate": "2020-10-22",
+      "starttime": "5:00",
+      "endtime": "7:00",
       "color": "#40ccc8",
       "url": ""
     },
-    {
-      "id": 2,
-      "name": "Cilantro Roundtable Discussion",
-      "startdate": "2020-7-15",
-      "enddate": "2020-7-17",
-      "starttime": "12:00",
-      "endtime": "2:00",
-      "color": "#ff8752",
-      "url": ""
-    }
   ]
 }

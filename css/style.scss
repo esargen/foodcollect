@@ -696,29 +696,12 @@ p {
     margin: auto;
   }
   > div {
-    max-width: 85%;
+    max-width: 75%;
     margin: auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 5%;
-    > a {
-      flex: 48%;
-      margin-left: 1%;
-      max-width: 48%;
-      text-align: center;
-      div {
-        padding: 15px 20px 25px 20px;
-        background-color: lighten($teal, 20%);
-        border-radius: 15px;
-        color: white;
-        transition: .25s ease;
-        &:hover {
-          transform: scale(1.05);
-          background-color: lighten($teal, 5%);
-          transition: .5s ease;
-        }
-      }
       h3 {
         font-size: 16pt;
         text-transform: uppercase;
@@ -729,9 +712,11 @@ p {
         margin: auto;
       }
     }
-    .column {
+    .columncontainer {
       max-width: 40%;
       flex: 40%;
+    }
+    .column {
       display: flex;
 
     }
@@ -762,7 +747,7 @@ p {
     .textcontent {
       flex: 75%;
       h4 {
-        color: $green;
+        color: $teal;
         font-size: 16pt;
         font-family: 'Oswald', sans-serif;
       }
@@ -781,7 +766,6 @@ p {
       }
     }
   }
-}
 
 @keyframes expandnav {
   0% {
