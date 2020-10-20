@@ -4,31 +4,33 @@ const persons = [
     name: 'Reagan Ross',
     position: 'Co-Director',
     description: "A senior double major in Anthropology and Food Science & Technology with an emphasis in sustainability, Reagan is passionate about the deeply rooted ways food affects our culture and how we see the world. She can also tell you all about your favrite cheeses and ice creams, and she'll top anything with tahini and sriracha. Reagan joined the Clemson Food Collective in 2018 and during the past two years, she has worked to bring local, sustainable, and equitable food to the table for CFC events and has helped to bring forth positive relationships between Clemson University and the Upstate community. This year she is over the moon to move into an Executive Director position with Co-Director Ronnie Clevenstine.",
-    image: 'static/kale.jpg',
+    image: 'static/Reagan.jpeg',
     email: 'raross@clemson.edu'
   },
   {
     name: 'Ronnie Clevenstine',
     position: 'Co-Director',
     description: 'Despite being a junior in Economics with a double minor in Mathemathics and Sustainability, Ronnie spends most of her time at Clemson in the sociology or political science department researching and discussing the social dimensions of our food system. Ronnie joined the CFC Team in the fall of her freshman year, thinking that sustainable, resilient local food systems were the sustainable solution of the future, and has found herself utterly obsessed with learning more about food equity, justice, and culture. She is incredibly excited to be share the Executive Director role with Reagan Ross and cannot wait to see CFC\'s continued growth on campus. ',
+    image: 'static/ronnie.jpg',
     email: 'vcleven@clemson.edu'
   },
   {
     name: 'Frances Schueren',
     position: 'Finance Director',
-    description: 'A junior in Food Science and Technology with an emphasis on sustainability and minors in plant and environmental science and chemistry, Frances is passionate about making food for everyone to enjoy, especially kids. When she isn’t making stovetop curry or chocolate banana bread, she is coordinating events, and meeting with faculty to improve CFC. She has been working with CFC for 3 years.',
-    image: 'static/bean.jpg'
+    description: 'A senior in Food Science and Technology with an emphasis on sustainability and minors in plant and environmental science and chemistry, Frances is passionate about making food for everyone to enjoy, especially kids. She joined CFC her freshman year, and acted as the director in 2019. She\'s now taking a step back from CFC to pursue an internship with Greenville nonprofit Mill Village Farms. She loves riding her bike, making blueberry coffee cake, and talking about the intersection of food, housing, and education.',
+    image: 'static/frances.jpg'
   },
   {
     name: 'Emma Sargent',
     position: 'Executive Designer',
     description: 'A junior Architecture major from Aiken, SC, Emma is most likely to be found thumbing through old cookbooks or sketching out her next ambitious dessert project. A passion for design and interest in the present-day conversation about food has landed her the sweet gig of CFC Executive Designer, <span style="randomcolor">web designer</span>, and manager for our publication, Active Culture.',
-    image: 'static/strawberry.jpg',
+    image: 'static/emma-sargent.png',
     email: 'esargen@g.clemson.edu'
   },
   {
     name: 'Carson Colenbaugh',
     position: 'Media Director',
+    image: 'static/strawberry.jpg',
     description: 'A sophomore Horticulture major from Kennesaw, Georgia, Carson joined the Food Collective team in 2018. His favorite fruit is the scuppernong, and he could eat fajitas every day. As a part of the Food Collective Executive Committee, Carson is in charge of producing our biweekly newsletter, Inch x Inch, and handling tasks for some of the pop-up events, as well as participating in planning the annual Clemson Food Summit.'
   },
 ]

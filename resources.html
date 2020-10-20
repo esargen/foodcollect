@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" media="(max-width: 480px)" href="css/mobile.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <title>Food Collective</title>
+</head>
+
+<body>
+  <div id="footer">
+    <a href="#"><div></div></a>
+  </div>
+
+  <div id="socials">
+    <div class="socialcontainer">
+      <div class="social">
+        <a href="mailto:clemsonfoodsummit@gmail.com" target=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="socialcontainer">
+      <div class="social">
+        <a href="https://www.instagram.com/clemsonfood/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="socialcontainer">
+      <div class="social">
+        <a href="https://www.facebook.com/ClemsonFood/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="header">
+    <div id="logo">
+      <a href="index.html">
+        <img src="static/logo.png" alt="Food Collective Logo" />
+      </a>
+    </div>
+  </div>
+
+  <div id="nav">
+    <div id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul id="webnav">
+      <li>
+        <div><a href="index.html">About</a></div>
+        <div>
+          <ul>
+            <a href="index.html#historycontainer"><li>History</li></a>
+            <a href="index.html#join"><li>Contact</li></a>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div><a href="engage.html">Engage</a></div>
+        <div>
+          <ul>
+            <li>Past Events</li>
+            <a href="engage/calendar.html"<li>Calendar</li></a>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div><a href="resources.html">Resources</a></div>
+        <div>
+          <ul>
+            <a href="resources/clemson.html"><li>University</li></a>
+            <a href="resources/local.html"><li>Local</li></a>
+            <li>Statewide</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div><a href="contact.html">Contact</a></div>
+        <div>
+          <ul>
+            <a href="contact.html#partner"><li>Partner</li></a>
+            <a href="contact.html#teamcontainer"><li>Our team</li></a>
+            <a href="contact.html#join"><li>Join us!</li></a>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div id="navoverlay"></div>
+
+  <div id="rest">
+    <div id="engagemenu">
+      <h2>Resources</h2>
+      <p>Want to volunteer with a local farm? Support a food pantry? Get involved with like-minded incredible, edible students? Check out our local and Clemson-specific resources for gastronomic go-getters like you!<p>
+      <div>
+        <a href="resources/clemson.html"><div>
+          <h3>Clemson</h3>
+          <p>Food-related student orgs that might be up your alley, celebrating everything from nutrition, to sustainability, to eating plant-based</p>
+        </div></a>
+        <a href="resources/local.html"><div>
+          <h3>Local</h3>
+          <p>Opportunities for service work, internships, and more in the upstate, with full particulars<p>
+        </div></a>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    const webnav = document.getElementById("webnav");
+    const buttons = webnav.children;
+    for (i=0; i < buttons.length; i++) {
+      const button = buttons[i];
+      const dropdown = button.querySelector("div:nth-child(2)");
+      dropdown.style.height = '0';
+      dropdown.style.opacity = '0';
+      button.addEventListener("mouseover", () => {
+          dropdown.style.height = 'auto';
+          dropdown.style.opacity = '1';
+      });
+      button.addEventListener("mouseout", () => {
+          dropdown.style.height = '0';
+          dropdown.style.opacity = '0';
+      })
+  }
+    const nav = document.getElementById("nav");
+    const headerheight = document.getElementById('header').offsetHeight;
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > headerheight) {
+        console.log('PLEASE');
+        nav.classList.add('sticky');
+      } else {
+        nav.classList.remove('sticky');
+      }
+    });
+  </script>
+  <script
+          src="https://code.jquery.com/jquery-3.5.1.js"
+          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+          crossorigin="anonymous">
+  </script>
+  <script src="app.js"></script>
+  <script src="https://kit.fontawesome.com/1bcdd38cc2.js" crossorigin="anonymous"></script>
+  <script src="resources.js"></script>
+
+
+</body>
+
+</html>

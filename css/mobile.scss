@@ -1,0 +1,212 @@
+@use "sass:color";
+
+$red: #ff7538;
+$green: #bdcc3e;
+$orange: #ff7538;
+$yellow: #ffe67b;
+$purple: #ba97d1;
+$pink: #ffc2db;
+$teal: #40ccc8;
+
+#header {
+  border-bottom-right-radius: 5px;
+  #logo {
+    margin-left: auto;
+    animation: none;
+    bottom: -75px;
+  }
+}
+
+#socials {
+  width: 40%;
+  right: auto;
+  margin: auto;
+}
+
+#nav {
+  animation: none;
+  margin: auto;
+  width: 100%;
+  max-width: 100%;
+  z-index: 5;
+  position: absolute;
+  #hamburger {
+    position: relative;
+    float: right;
+    bottom: 125px;
+    right: 15px;
+    height: 25px;
+    width: 25px;
+    div {
+    height: 20%;
+    margin-bottom: 20%;
+    background-color: white;
+    border-radius: 3px;
+    }
+  }
+  > ul {
+    margin: auto;
+    max-height: inherit;
+    max-width: 50%;
+    transition: .5s ease;
+    display: block;
+    > li {
+      margin: auto;
+      margin-top: 15px;
+      max-width: 100% !important;
+      div:nth-child(1) {
+        border-radius: 15px;
+        width: 100px;
+        margin: auto;
+      }
+      ul {
+        display: none;
+      }
+  }
+  }
+}
+
+#navoverlay {
+  display: block;
+  top: 0;
+  background-color: white;
+  opacity: 0;
+  position: absolute;
+  height: 217vh;
+  width: 100%;
+  z-index: 4;
+  transition: .5s ease;
+  pointer-events: none;
+}
+
+.section {
+  display: block;
+  margin-top: 50px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+
+
+#join .image, #partner .image {
+  margin: auto;
+  margin-top: 50px;
+}
+
+#join .text, #partner > .text {
+  text-align: center;
+  margin: auto;
+  p {
+    margin: auto;
+  }
+}
+
+#join .signup {
+  margin: auto;
+  max-width: 40%;
+  margin-top: 25px;
+}
+
+#join p, #partner p {
+  text-align: justify;
+}
+
+#team > div:nth-child(2) .row {
+  display: block;
+  .column {
+    max-width: 85%;
+  }
+}
+
+
+#home {
+  > div {
+    margin: auto;
+    width: 80%;
+    * {
+    text-align: center;
+    }
+  }
+  p {
+    width: 100%;
+    text-align: justify;
+  }
+  .image {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-top: 15%;
+    img {
+      bottom: 20px;
+    }
+  }
+  .text {
+    margin: auto;
+    flex: 100%;
+  }
+}
+
+#history {
+  .image {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-top: 15%;
+    img {
+      bottom: 20px;
+    }
+  }
+}
+
+#involve {
+  p {
+    margin-top: auto;
+    margin-bottom: auto;
+    a {
+      bottom: 0;
+    }
+  }
+  .socialblock {
+    width: 80%;
+    margin: auto;
+  }
+  > div:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-top: 15%;
+    img {
+      bottom: 20px;
+    }
+  }
+}
+
+#join {
+  p {
+    margin-top: auto;
+    margin-bottom: auto;
+    a {
+      bottom: 0;
+    }
+  }
+
+}
+
+#engagemenu {
+  > p {
+    text-align: justify;
+    max-width: 85%;
+  }
+  > div {
+    display: block;
+    a {
+      div {
+        background-color: lighten($teal, 5%);
+      }
+    }
+  }
+}
+
+#calendar {
+  max-width: 85%;
+}
