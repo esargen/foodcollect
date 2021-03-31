@@ -3,7 +3,7 @@ const cultural = document.getElementById("cultural");
 const culturalevents = [
   {
     hour: "10:15 - 10:45am",
-    event: "Presentation by <b>Dr. Ashli Stokes</b>- Director for the Center for the Study of the New South at the University of North Carolina, Charlotte"
+    event: "Presentation by <b>Dr. Ashli Stokes</b>, Director for the Center for the Study of the New South at the University of North Carolina, Charlotte"
   },
   {
     hour: "10:45 - 11:30am",

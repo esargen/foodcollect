@@ -3,7 +3,7 @@ const environmental = document.getElementById("environmental");
 const environmentalevents = [
   {
     hour: "12:30 - 12:45 pm",
-    event: "Presentation by <b>Makenna Kull</b> - Student Leader of Clemson’s Food Waste Recovery efforts"
+    event: "Presentation by <b>Makenna Kull</b>, Student Leader of Clemson’s Food Waste Recovery efforts"
   },
   {
     hour: "12:45 - 1:45pm",

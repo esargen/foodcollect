@@ -205,4 +205,21 @@
   text-align: justify;
 }
 
+#schedule .text .event {
+  display: block;
+  margin-bottom: 15px;
+  max-width: 100%;
+  margin-left: 2.5%;
+}
+#schedule .text .event > :nth-child(1) {
+  font-size: 14pt;
+}
+#schedule .text .event > :nth-child(2) {
+  font-size: 10pt;
+}
+
+#summitmenu > div {
+  display: block;
+}
+
 /*# sourceMappingURL=mobile.css.map */

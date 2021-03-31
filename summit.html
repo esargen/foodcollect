@@ -100,20 +100,27 @@
     if (mq.matches) {
       const hamburg = document.getElementById('hamburger');
       const nav = document.getElementById('webnav');
+      const summitbutton = document.getElementById('summitbutton');
       const overlay = document.getElementById('navoverlay');
       nav.style.opacity = '0';
       nav.style.pointerEvents = 'none';
+      summitbutton.style.opacity = '0';
+      summitbutton.style.pointerEvents = 'none';
       overlay.style.opacity = '0';
       overlay.style.pointerEvents = 'none';
         hamburg.addEventListener('click', () => {
           if (nav.style.opacity === '0' && overlay.style.opacity === '0') {
             nav.style.opacity = '1';
             nav.style.pointerEvents = 'auto';
+            summitbutton.style.opacity = '1';
+            summitbutton.style.pointerEvents = 'auto';
             overlay.style.opacity = '.5';
             overlay.style.pointerEvents = 'auto';
           } else {
             nav.style.opacity = '0';
             nav.style.pointerEvents = 'none';
+            summitbutton.style.opacity = '0';
+            summitbutton.style.pointerEvents = 'none';
             overlay.style.opacity = '0';
             overlay.style.pointerEvents = 'none';
           }
@@ -121,6 +128,8 @@
       overlay.addEventListener('click', () => {
           nav.style.opacity = '0';
           nav.style.pointerEvents = 'none';
+          summitbutton.style.opacity = '0';
+          summitbutton.style.pointerEvents = 'none';
           overlay.style.opacity = '0';
           overlay.style.pointerEvents = 'none';
       });
@@ -189,6 +198,8 @@
 
 <script>
   const webnav = document.getElementById("webnav");
+  const summitbutton = document.getElementById("summitbutton");
+
   const buttons = webnav.children;
   for (i=0; i < buttons.length; i++) {
     const button = buttons[i];

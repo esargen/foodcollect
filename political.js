@@ -3,7 +3,7 @@ const political = document.getElementById("political");
 const politicalevents = [
   {
     hour: "3:35 - 3:45pm",
-    event: "Presentation by <b>Hannah Scott</b> - President of Clemson PawPantry",
+    event: "Presentation by <b>Hannah Scott</b>, President of Clemson PawPantry",
     speaker: "hannah",
     link: "https://www.youtube.com/watch?v=Fowgc-J4kCc"
   },
